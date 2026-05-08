@@ -78,6 +78,8 @@ app.post('/send-invoice', async (req, res) => {
     }
 });
 
-app.listen(8765, () => {
-    console.log('Servidor SMTP iniciado en puerto 8765');
+const PORT = process.env.PORT || 8765;
+
+app.listen(PORT, () => {
+  console.log(`Servidor SMTP iniciado en puerto ${PORT}`);
 });
